@@ -10,7 +10,7 @@ import java.math.BigDecimal;
 public class TaxTest {
     public static void main(String[] args) {
 
-        Budget budget = new Budget(new BigDecimal("1000"));
+        Budget budget = new Budget(new BigDecimal("1000"), 1);
 
         TaxCalculator taxCalculator = new TaxCalculator();
 
