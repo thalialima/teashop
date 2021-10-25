@@ -10,6 +10,6 @@ public class DiscountCalculator{
         Discount discount = new DiscountForMoreThanFiveItems(
                 new DiscountForBigPrice(new NoDiscount()));
 
-        return discount.calculate(budget);
+        return discount.doCalculation(budget);
     }
 }
