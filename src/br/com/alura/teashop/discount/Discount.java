@@ -1,6 +1,6 @@
 package br.com.alura.teashop.discount;
 
-import br.com.alura.teashop.Budget;
+import br.com.alura.teashop.budget.Budget;
 
 import java.math.BigDecimal;
 
@@ -12,6 +12,7 @@ public abstract class Discount {
         this.next = next;
     }
 
+    //template method
     public BigDecimal doCalculation(Budget budget){
         if(mustApply(budget)){
             return calculate(budget);

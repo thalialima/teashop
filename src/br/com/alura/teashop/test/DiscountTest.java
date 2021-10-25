@@ -1,9 +1,7 @@
 package br.com.alura.teashop.test;
 
-import br.com.alura.teashop.Budget;
+import br.com.alura.teashop.budget.Budget;
 import br.com.alura.teashop.discount.DiscountCalculator;
-import br.com.alura.teashop.tax.ISS;
-import br.com.alura.teashop.tax.TaxCalculator;
 
 import java.math.BigDecimal;
 

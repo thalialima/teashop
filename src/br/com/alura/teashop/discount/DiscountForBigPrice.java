@@ -1,6 +1,6 @@
 package br.com.alura.teashop.discount;
 
-import br.com.alura.teashop.Budget;
+import br.com.alura.teashop.budget.Budget;
 
 import java.math.BigDecimal;
 //chain of responsabilities

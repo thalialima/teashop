@@ -1,7 +1,6 @@
 package br.com.alura.teashop.test;
 
-import br.com.alura.teashop.Budget;
-import br.com.alura.teashop.tax.ICMS;
+import br.com.alura.teashop.budget.Budget;
 import br.com.alura.teashop.tax.ISS;
 import br.com.alura.teashop.tax.TaxCalculator;
 
