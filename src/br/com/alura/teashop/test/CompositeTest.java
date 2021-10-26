@@ -2,6 +2,7 @@ package br.com.alura.teashop.test;
 
 import br.com.alura.teashop.budget.Budget;
 import br.com.alura.teashop.budget.BudgetItem;
+import br.com.alura.teashop.budget.BudgetProxy;
 
 import java.math.BigDecimal;
 
@@ -16,6 +17,10 @@ public class CompositeTest {
 
         newBudget.addItem(oldBudget);
 
-        System.out.println(newBudget.getValue());
+        BudgetProxy proxy = new BudgetProxy(newBudget);
+        System.out.println(proxy.getValue());
+        System.out.println(proxy.getValue());
+        System.out.println(proxy.getValue());
+        System.out.println(proxy.getValue());
     }
 }
