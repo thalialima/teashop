@@ -2,6 +2,7 @@ package br.com.alura.teashop.budget;
 
 import br.com.alura.teashop.budget.situation.Approved;
 import br.com.alura.teashop.budget.situation.BudgetSituation;
+import br.com.alura.teashop.budget.situation.Finished;
 import br.com.alura.teashop.budget.situation.ToAnalyze;
 
 import java.math.BigDecimal;
@@ -49,5 +50,9 @@ public class Budget {
 
     public BudgetSituation getSituation() {
         return situation;
+    }
+
+    public boolean isFinished() {
+        return this.situation instanceof Finished;
     }
 }
