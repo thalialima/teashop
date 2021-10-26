@@ -3,6 +3,7 @@ package br.com.alura.teashop.test;
 import br.com.alura.teashop.budget.Budget;
 import br.com.alura.teashop.order.GenerateOrder;
 import br.com.alura.teashop.order.GenerateOrderHandler;
+import br.com.alura.teashop.order.OrderLog;
 import br.com.alura.teashop.order.action.SaveOrderInDatabase;
 import br.com.alura.teashop.order.action.SendEmail;
 
@@ -18,7 +19,8 @@ public class OrderTest {
 
         GenerateOrder generateOrder = new GenerateOrder(client, budgetValue, quantityItems);
         GenerateOrderHandler handler = new GenerateOrderHandler(
-                Arrays.asList(new SaveOrderInDatabase(), new SendEmail()));
+                Arrays.asList(new SaveOrderInDatabase(), new SendEmail(), new OrderLog())
+        );
         handler.execute(generateOrder);
     }
 }

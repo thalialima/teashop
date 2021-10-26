@@ -27,4 +27,13 @@ public class Order {
     public Budget getBudget() {
         return budget;
     }
+
+    @Override
+    public String toString() {
+        return "Order { " +
+                "Client = '" + client + '\'' +
+                ", Date = " + date +
+                ", Budget = " + budget +
+                '}';
+    }
 }
