@@ -4,7 +4,21 @@ import br.com.alura.teashop.budget.Budget;
 
 import java.math.BigDecimal;
 
-interface Tax {
+public abstract class Tax {
 
-    BigDecimal calculate(Budget budget);
+    private Tax otherTax;
+
+    public Tax(Tax otherTax) {
+        this.otherTax = otherTax;
+    }
+
+    protected abstract BigDecimal doCalculation(Budget budget);
+
+   public BigDecimal calculate(Budget budget){
+       BigDecimal taxValue = doCalculation(budget);
+       BigDecimal otherTaxValue = BigDecimal.ZERO;
+       if(otherTax != null)
+           otherTaxValue = otherTax.doCalculation(budget);
+       return taxValue.add(otherTaxValue);
+   }
 }

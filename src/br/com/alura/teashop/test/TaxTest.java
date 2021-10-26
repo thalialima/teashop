@@ -1,6 +1,7 @@
 package br.com.alura.teashop.test;
 
 import br.com.alura.teashop.budget.Budget;
+import br.com.alura.teashop.tax.ICMS;
 import br.com.alura.teashop.tax.ISS;
 import br.com.alura.teashop.tax.TaxCalculator;
 
@@ -13,7 +14,7 @@ public class TaxTest {
 
         TaxCalculator taxCalculator = new TaxCalculator();
 
-        System.out.println(taxCalculator.calculate(budget, new ISS()));
+        System.out.println(taxCalculator.calculate(budget, new ICMS(new ISS(null))));
 
     }
 }
