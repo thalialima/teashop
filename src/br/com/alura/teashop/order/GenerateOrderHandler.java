@@ -1,6 +1,7 @@
 package br.com.alura.teashop.order;
 
 import br.com.alura.teashop.budget.Budget;
+import br.com.alura.teashop.budget.BudgetItem;
 import br.com.alura.teashop.order.action.ActionAfterGenerateOrder;
 
 import java.time.LocalDateTime;
@@ -15,7 +16,8 @@ public class GenerateOrderHandler {
     }
 //Listener
     public void execute(GenerateOrder date){
-        Budget budget = new Budget(date.getBudgetValue(), date.getQuantityItems());
+        Budget budget = new Budget();
+        budget.addItem(new BudgetItem(date.getBudgetValue()));
 
         Order order = new Order(date.getClient(), LocalDateTime.now(), budget);
 
